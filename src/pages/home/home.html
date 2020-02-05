@@ -1,0 +1,30 @@
+<ion-content >
+<div class="container">
+  <ion-item *ngIf="weather_data" class="city" no-lines>{{weather_data.city.name}},
+    {{weather_data.city.country}}</ion-item>
+    <ion-row *ngIf="weather_data">
+      <ion-col col-2 *ngFor="let day of days; let i = index">
+        <ion-card padding>
+          <ion-row> 
+            <div>{{dates[i]}}</div>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div class="temperature">{{averages_temp[i]}}&deg;</div>
+              <div>Feels like {{averages_feels[i]}}&deg;</div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+          <img src="/assets/imgs/Thermometer-50.png" style="height: 50px; width: 50px;"><span class="ico">{{pressure[i]}} hPa</span>
+          </ion-row>
+          <ion-row>
+            <img src="/assets/imgs/Moon-Full.png" style="height: 50px; width: 50px;"><span class="ico">{{humidity[i]}} %</span>
+          </ion-row>
+          <ion-row>
+            <img src="/assets/imgs/Wind.png" style="height: 50px; width: 50px;"><span class="ico">{{wind[i]}} km/hr</span>
+          </ion-row>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+</div>
+</ion-content>

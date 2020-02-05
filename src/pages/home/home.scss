@@ -1,0 +1,32 @@
+page-home {
+    .scroll-content {
+    background: url("/assets/imgs/dublin.jpg");
+    background-size: cover;
+  }
+  ion-card{
+    opacity: 0.8;
+      border-radius: 15px !important;
+  }
+  .city{
+      text-align: center;
+      display: flex;
+      background: transparent;
+      font-family: "Montserrat", sans-serif;
+      font-size: 4.5rem !important;
+      color: whitesmoke;
+  }
+  .temperature {
+      
+      margin: 0;
+      font-size: 80px;
+      line-height: 100px;
+      position: relative;
+      font-weight: 100;
+  }
+  .container{
+      margin-top: 10px;
+  }
+  .ico{
+      padding-top: 15px;
+  }
+}
